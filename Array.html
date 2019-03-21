@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function myFunction() {
+      var array = [
+        {
+          "name": "AppleiXoom",
+          "image": "Images/s1.jpg",
+          "content": "The iPad is a 9.7 inch touch screen tablet PC made by Apple . The iPad is basically a netbook without a keyboard. ... The iPad, which uses Apple's mobile operating system (iOS) combines the computing power of a laptop or desktop computer.",
+          "price": 200
+        }
+        ,
+        {
+          "name": "Tshirt",
+          "image": "Images/s2.jpg",
+          "content": "Typically made of cotton fibers knitted in a jersey stitch, they have a distinctive soft texture compared to woven shirts. The majority of modern versions have a body made from a continuously woven tube, on a circular loom",
+          "price": 300
+        },
+        {
+          "name": "Shoes",
+          "image": "Images/s3.jpg",
+          "content": "A shoe is an item of footwear intended to protect and comfort the human foot while doing various activities. Shoes are also used as an item of decoration. The design of shoes has varied enormously through time.Shoes are also used as an item of decoration. ",
+          "price": 500
+        },
+        {
+          "name": "Samsung",
+          "image": "Images/s4.jpg",
+          "content": "The iPad is a 9.7 inch touch screen tablet PC made by Apple . The iPad is basically a netbook without a keyboard. ... The iPad, which uses Apple's mobile operating system (iOS) combines the computing power of a laptop or desktop computer.",
+          "price": 600
+        },
+        {
+          "name": "IPhone",
+          "image": "Images/s5.jpg",
+          "content": "A shoe is an item of footwear intended to protect and comfort the human foot while doing various activities. Shoes are also used as an item of decoration. The design of shoes has varied enormously through time.Shoes are also used as an item of decoration. ",
+          "price": 40
+        },
+        {
+          "name": "LycaMobile",
+          "image": "Images/s6.jpg",
+          "content": "Typically made of cotton fibers knitted in a jersey stitch, they have a distinctive soft texture compared to woven shirts. The majority of modern versions have a body made from a continuously woven tube, on a circular loom",
+          "price": 30
+        }
+      ];
+      var data = '';
+      for (var i = 0; i < array.length; i++) {
+        data += "<div class='maindiv'> <div class='subdiv'>" + array[i].name + " </div> \
+                                       <div class='subdiv'> <img src="+ array[i].image + "> </div> \
+                                       <div class='subdiv'>" + array[i].content + "</div> \
+                                       <div class='subdiv'>" + array[i].price + "</div> \
+                 </div > ";
+      }
+      document.getElementById('display').innerHTML = data;
+    }
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2> Array Fetching in Div using Javascript</h2>
+
+    <div class='topdiv'>Name</div>
+    <div class='topdiv'>Image</div>
+    <div class='topdiv'>Content</div>
+    <div class='topdiv'>Price</div><br>
+    <div id="display" style="text-align:center">
+      </tbody>
+    </div>
+  </div>
+  <br>
+  <button type="button" onclick="myFunction()">Click Me </button>
+
+
+
+</body>
+
+</html>

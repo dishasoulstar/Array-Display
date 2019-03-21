@@ -1,0 +1,129 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>google.com</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <script type="text/javascript">
+    
+        function CreateObject() {
+            var book = new Object();   // Create the object
+            book.subject = "JavaScript"; // Assign properties to the object
+            book.author = "Praveer Panghal";
+
+            console.log("Book name is : " + book.subject + "<br>");
+            console.log("Book author is : " + book.author + "<br>");
+        }
+    </script>
+</head>
+<body>
+   <input  type="button" value="Click me" onclick="CreateObject()"/>
+</body>
+</html> -->
+
+<!-- <html>
+    <head>
+        <title>User-defined objects</title>
+        <script type="text/javascript">
+        
+        function Allbook(value1, value2) {
+                    this.title = value1;
+                    this.author = value2;
+                }
+        
+                function CreateObject() {
+        
+                    var myBook = new Allbook ("Maths", "HC Verma");
+                    document.write("Book title is : " + myBook.title + "<br>");
+                    document.write("Book author is : " + myBook.author + "<br>");
+        
+                    var NewBook = new Allbook("Chemistry", "Sheyang"); // Need to write the function name which includes this keyword.
+                    document.write("Book title is : " + NewBook.title + "<br>");
+                    document.write("Book author is : " + NewBook.author + "<br>");
+        
+                }
+            </script>
+        </head>
+        <body>
+           <input  type="button" value="Click me" onclick="CreateObject()"/>
+        </body>
+        </html> -->
+        <!-- <html>
+<head>
+<title>User-defined objects</title>
+  <script type="text/javascript">
+
+        function CalculatePrice(amount) {
+            this.price = amount;
+        }
+        function book(book_title, book_author) {
+            this.title = book_title;
+            this.author = book_author;
+            this.addPrice = CalculatePrice; // Assign that method as property.
+        }
+
+
+
+        function CreateObject() {
+
+            var myBook = new book("Maths", "HC Verma");
+            myBook.addPrice(1000);
+            document.write("Book title is : " + myBook.title + "<br>");
+            document.write("Book author is : " + myBook.author + "<br>");
+            document.write("Book price is : " + myBook.price + "<br>");
+
+
+        }
+    </script>
+</head>
+<body>
+   <input  type="button" value="Click me" onclick="CreateObject()"/>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript Objects</title>
+
+
+    <script type="text/javascript">
+
+        function CalculatePrice(amount) {
+            this.price = amount;
+        }
+        function book(book_title, book_author) {
+            this.title = book_title;
+            this.author = book_author;
+            this.addPrice = CalculatePrice; // Assign that method as property.
+            this.countryName = "USA";
+        }
+
+
+
+        function CreateObject() {
+
+            var myBook = new book("Maths", "HC Verma");
+            myBook.addPrice(1000);
+
+            book.prototype.CityName = "Colonia";
+           // delete book.prototype.CityName;
+            document.write("Book title is : " + myBook.title + "<br>");
+            document.write("Book author is : " + myBook.author + "<br>");
+            document.write("Book price is : " + myBook.price + "<br>");
+            document.write("Book published in City is : " + myBook.CityName + "<br>");
+            document.write("Book published in Country is : " + myBook.countryName + "<br>");
+
+
+        }
+    </script>
+</head>
+<body>
+   <input  type="button" value="Click me" onclick="CreateObject()"/>
+</body>
+</html>
